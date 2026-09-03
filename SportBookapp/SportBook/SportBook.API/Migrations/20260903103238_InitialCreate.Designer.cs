@@ -12,7 +12,7 @@ using SportBook.API.Data;
 namespace SportBook.API.Migrations
 {
     [DbContext(typeof(SportBookContext))]
-    [Migration("20260903101514_InitialCreate")]
+    [Migration("20260903103238_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -576,7 +576,7 @@ namespace SportBook.API.Migrations
                     b.HasOne("SportBook.API.Models.Oprema", "Oprema")
                         .WithMany("RezervacijaOprema")
                         .HasForeignKey("IdOpreme")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("SportBook.API.Models.Rezervacija", "Rezervacija")

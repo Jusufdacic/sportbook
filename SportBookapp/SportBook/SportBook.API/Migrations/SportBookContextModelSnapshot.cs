@@ -573,7 +573,7 @@ namespace SportBook.API.Migrations
                     b.HasOne("SportBook.API.Models.Oprema", "Oprema")
                         .WithMany("RezervacijaOprema")
                         .HasForeignKey("IdOpreme")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("SportBook.API.Models.Rezervacija", "Rezervacija")

@@ -137,7 +137,8 @@ namespace SportBook.API.Data
             modelBuilder.Entity<RezervacijaOprema>()
                 .HasOne(ro => ro.Oprema)
                 .WithMany(o => o.RezervacijaOprema)
-                .HasForeignKey(ro => ro.IdOpreme);
+                .HasForeignKey(ro => ro.IdOpreme)
+                .OnDelete(DeleteBehavior.Restrict);
 
 
             modelBuilder.Entity<BlokadaTermina>()

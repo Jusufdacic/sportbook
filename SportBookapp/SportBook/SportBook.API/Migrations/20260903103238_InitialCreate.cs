@@ -345,7 +345,7 @@ namespace SportBook.API.Migrations
                         column: x => x.IdOpreme,
                         principalTable: "Oprema",
                         principalColumn: "IdOpreme",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_RezervacijaOprema_Rezervacija_IdRezervacije",
                         column: x => x.IdRezervacije,
